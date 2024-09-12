@@ -33,3 +33,4 @@ def devops(student_info):
 name = devops(student_info)
 print("Course name " + name + " is present")
 
+# print(student_info["course_name"])
