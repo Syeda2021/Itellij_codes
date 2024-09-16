@@ -248,3 +248,180 @@ import math
 # print(f"Odd numbers: {odd_numbers}")
 
 ###########################################################################################
+
+#Lab:7: Iterating Over Dictionaries.  prints all the keys in a dictionary of student names and grades.
+# def print_student_keys(student_grades):
+#     for key in student_grades:
+#         print(key)  # Print each key in the dictionary
+#
+# # Example usage
+# print_student_keys({'Alice': 85, 'Bob': 90, 'Charlie': 78})
+
+##########ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+# student_grades = {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+# for key in student_grades:
+#     print(key)
+
+###############################################################################
+#2. Create a program that iterates over a dictionary and prints the average value of all the numeric values.
+# def average_of_values(data):
+#     total_sum = 0
+#     count = 0
+#     for value in data.values():
+#         total_sum += value  # Sum all the values
+#         count += 1
+#     if count > 0:
+#         average = total_sum / count
+#         print(f"Average value: {average}")
+#     else:
+#         print("No values to average")
+#
+# # Example usage
+# average_of_values({'Alice': 85, 'Bob': 90, 'Charlie': 78})
+####################ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+# data= {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+# total_sum = 0
+# count = 0
+# for value in data.values():
+#     total_sum += value  # Sum all the values
+#     count += 1
+# if count > 0:
+#     average = total_sum / count
+#     print(f"Average value: {average}")
+# else:
+#     print("No values to average")
+
+##############################################################
+#Exercise 3:Problem: Implement a program that prints the keys and values of a dictionary in a formatted string
+# def print_dict_items(data):
+#     for key, value in data.items():
+#         print(f"Key: {key}, Value: {value}")  # Print key-value pairs
+#
+# # Example usage
+# print_dict_items({'Alice': 85, 'Bob': 90, 'Charlie': 78})
+#############################################################################################
+# Lab 8: Handling None in Loops
+# Exercise 1:
+# Problem: Write a program that replaces None values in a list with the string "Unknown" and prints the modified list.
+# def replace_none_with_unknown(data_list):
+#     modified_list = ['Unknown' if item is None else item for item in data_list]
+#     print(modified_list)
+#
+# # Example usage
+# replace_none_with_unknown(['Alice', None, 'Bob', None, 'Charlie'])
+# Exercise 2:
+# Problem: Create a program that filters out None values from a list and prints the remaining values.
+#
+# Solution:
+# def filter_none_values(data_list):
+#     filtered_list = [item for item in data_list if item is not None]
+#     print(filtered_list)
+#
+# # Example usage
+# filter_none_values(['Alice', None, 'Bob', None, 'Charlie'])
+
+###################################################################################################
+#Exercise 3:Problem: Implement a for loop to check if any value in a dictionary is None and print a message if so.
+
+# def check_none_in_dict(data_dict):
+#     for key, value in data_dict.items():
+#         if value is None:
+#             print(f"Value for key '{key}' is None.")
+#
+# # Example usage
+# check_none_in_dict({'Alice': 85, 'Bob': None, 'Charlie': 78})
+####################################################################################
+#Exception
+#Lab 1: Handling SyntaxError
+# def greet():
+#     print("Hello!")
+
+#Lab 2: Handling ValueError
+# Description:
+# Explore ValueError, which occurs when a function receives an argument of the correct type but inappropriate value. You'll practice handling such errors using try and except.
+# try:
+#     num = int("abc")
+# except ValueError:
+#     print("Cannot convert to an integer.")
+    #######################
+
+# try:
+#     age = int(input("Enter your age: "))
+# except ValueError:
+#     print("Please enter a valid number.")
+
+############################################################
+#Lab3: In this lab, you'll learn how to use try and except blocks to catch and handle exceptions, preventing your program from crashing.
+
+# try:
+#     result = 10 / 0
+# except ZeroDivisionError:
+#     print("Cannot divide by zero.")
+
+##########################################################
+# try:
+#     num = int("cat")
+#     result = num / 0
+# except ValueError:
+#     print("Invalid number.")
+# except ZeroDivisionError:
+#     print("Cannot divide by zero.")
+
+###########################################################
+#Lab 4: Handling NameError:Learn to handle NameError, which occurs when a local or global name is not found. This lab focuses on identifying the cause and resolving NameError.
+#1. Using Undefined Variables:
+
+# try:
+#     print(x)
+# except NameError:
+#     print("Variable 'x' is not defined.")
+#orrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+# x = 10
+# print(x)  # This will now work correctly.
+
+###########################################################################
+#Lab 5: Using else with try: Explore the use of else in try and except blocks. The else block runs when no exception occurs, allowing you to separate the normal execution flow from error handling.
+# try:
+#     num = int("100")
+# except ValueError:
+#     print("Invalid number.")
+# else:
+#     print("Conversion successful:", num)
+##############################################################################
+#Using else to Proceed After Successful Operation:
+# try:
+#     with open("sample.txt", "r") as file:
+#         content = file.read()
+# except FileNotFoundError:
+#     print("File not found.")
+# else:
+#     print("File content:", content)
+
+################################################################################
+#Lab 6: Using pass in Exception Handling:Learn how to use pass in an except block to ignore certain exceptions. This is useful when you want to handle an exception without taking any specific action.
+# try:
+#     num = int("abc")
+# except ValueError:
+#     pass  # Do nothing if a ValueError occurs.
+##############################################################
+# try:
+#     num = int(input("Enter a number: "))
+# except ValueError:
+#     print("That was not a number.")
+# except:
+#     pass  # Ignore any other exceptions.
+################################################################################
+#Lab 7: Raising Exceptions with raise,This lab focuses on using raise to manually trigger exceptions. You'll learn how to raise exceptions when certain conditions in your code are not met.
+#1.Raising a ValueError:
+# x = -5
+#
+# if x < 0:
+#     raise ValueError("Negative value encountered.")
+###############################################################
+#Raising a Custom Exception:
+# class NegativeNumberError(Exception):
+#     pass
+#
+# num = -10
+# if num < 0:
+#     raise NegativeNumberError("Negative numbers are not allowed.")
