@@ -1,0 +1,5 @@
+data = [
+    {"Name": "Alice", "Age": 25, "City": "New York"},
+    {"Name": "Bob", "Age": 30, "City": "Chicago"},
+    {"Name": "John", "Age": 38, "City": "Philadelphia"}
+ ]
